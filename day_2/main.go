@@ -93,13 +93,13 @@ func get_arr_diffs(arr []int) []int {
 func determine_safe(report []int) bool {
 	// We can check if each array is sorted. Either ascending or descending.
 	//If it is, then we just need to check diffs.
-	sortedAsc := sort.SliceIsSorted(report, func(p, q int) bool {
+	sortedDesc := sort.SliceIsSorted(report, func(p, q int) bool {
 		return report[p] > report[q]
 	})
 
 	// fmt.Println(sortedAsc)
 
-	sortedDesc := sort.SliceIsSorted(report, func(p, q int) bool {
+	sortedAsc := sort.SliceIsSorted(report, func(p, q int) bool {
 		return report[p] < report[q]
 	})
 
